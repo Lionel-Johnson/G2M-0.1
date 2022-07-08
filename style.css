@@ -21,11 +21,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-.burger, .section4 .boxe2 .right .hide,
-.section3 .boxe2 .top .title {
-    display: none;
-}
 /* container */
 
 
@@ -49,9 +44,64 @@
 }
 
 .nav {
-    flex-basis: 30%;
+    flex-box: 30%;
+}
+.Langues {
+    display: flex;
+    float: right 100px;   
+     max-width: 600px;
+    height: 500px;
+    padding: 50px;
+    color: #555;
+    float: right;
+    margin-left: 30%;
+    margin-bottom: -55vh;
+}
+.check {
+    position: relative;
+    width: 50px;
 }
 
+.check:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 40px;
+}
+
+.check:checked:before {
+    background: #00a1ff;
+}
+
+.check:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transform: 0.25s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+.check:checked:after {
+    left: 25px;
+    border: 2px solid #00a1ff;
+}
+
+    {}
+
+.check:checked: .En {
+    color: #333;
+}
+
+.Fr {
+    color: #00a1ff;
+}
 .nav ul {
     display: flex;
     justify-content: space-between;
@@ -406,7 +456,7 @@ figure figcaption {
     position: absolute;
     top: 50%;left: 50%;
     transform: translate(-50%,-50%);
-    width: 40px;
+    width: 40vw;
     height: 40px;
     padding: 2%;
 }
@@ -433,16 +483,16 @@ figure figcaption {
 }
 
 .section4 .cercle .item .shadow .one__cr {
-    width: 120px;
-    height: 8vh;
+    width: 100vw;
+    height: 4vw;
     background: grey;
     border-radius: 50px;
     position: relative;
 }
 
 .section4 .little .first img {
-    width: 40px;
-    height: 40px;
+    width: 40vw;
+    height: 40vw;
 }
 
 .section4 .little .shadow .detail {
@@ -1173,7 +1223,9 @@ body{
 
 }
 
-@media screen and (min-width: 685px) and (max-width: 100vw) {}
+@media screen and (min-width: 685px) and (max-width: 100vw)
+.contact{
+    display: none;
 
 @media screen and (min-width: 888px) and (max-width: 100vw) {}
 
